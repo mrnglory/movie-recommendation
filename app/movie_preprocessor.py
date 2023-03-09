@@ -10,7 +10,7 @@ from config import TMDB_API_KEY
 
 def add_poster(dataframe: DataFrame) -> DataFrame:
     """
-    데이터 프레임의 tmdb_id 값을 맵핑하여 추출한 영화 포스터 이미지 정보 추출 및 추가
+    데이터 프레임의 tmdb_id 값으로부터 영화 포스터 이미지 정보 추출 및 추가
     @param dataframe: 영화 포스터 이미지 정보를 추가할 데이터 프레임
     @return: 영화 포스터 이미지가 추가된 데이터 프레임
     """
@@ -45,7 +45,6 @@ def add_ratings(dataframe: DataFrame) -> DataFrame:
     ).reset_index()
 
     result = dataframe.merge(agg_ratings, on="movieId")
-    print(type(result))
 
     return result
 
@@ -74,6 +73,3 @@ if __name__ == "__main__":
     result = add_poster(dataframe=result)
 
     result.to_csv(path_or_buf="data/result.csv")
-
-    print(result)
-    print(result.columns)
