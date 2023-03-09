@@ -16,6 +16,7 @@
 ### 주요 기능
 
 - 사용자 평점에 따른 영화 추천 결과 제공
+  - 영화 데이터셋 출처: https://files.grouplens.org/datasets/movielens/ml-latest-small.zip
 - 영화 랜덤 검색 결과 제공
 - 영화 장르별 분류 결과 제공
 - 영화 상세 결과 제공
